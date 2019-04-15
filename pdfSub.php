@@ -1,8 +1,8 @@
 <?php
-$db=mysqli_connect("localhost","chopsub","chopsub");
-mysqli_select_db($db,"chopsub");
-//$db=mysqli_connect("us-cdbr-iron-east-01.cleardb.net","bdc4ca09f8e066","0e2c8e68");
-//mysqli_select_db($db,"heroku_8c727900bd20d2d");
+//$db=mysqli_connect("localhost","chopsub","chopsub");
+//mysqli_select_db($db,"chopsub");
+$db=mysqli_connect("eu-cdbr-west-02.cleardb.net","b9cfd46243c65b","8480309c");
+mysqli_select_db($db,"heroku_880ea39488893f3");
 $query="select * from subway";
 $resultat=mysqli_query($db,$query);
 Include("phpToPDF.php");
