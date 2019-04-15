@@ -83,7 +83,9 @@ if ($donnees1['nb1']==1) {
 				<select name="role" > 
 					<option value="0">utilisasteur</option>
 					<option value="1">admin</option>
-					<option value="2">presta</option>
+					<option value="2">subway</option>
+					<option value="3">burger</option>
+					<option value="4">pizza</option>
 				</select>
 			
 			</div>
