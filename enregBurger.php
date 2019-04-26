@@ -119,12 +119,7 @@ if ($_GET['burger']=='' || $_GET['formule1']=='' || $_GET['prix']=='' ) {
 	echo "</div>";
 } 
 else {
-echo $login;
-echo $_GET['burger'];
-echo $_GET['formule1'];
-echo $date;
-echo $_GET['prix'];
-echo $_GET['info'];
+
 $date = date("Y-m-d");
 
 $bdd->exec("INSERT INTO burger (nom, burger, formule, date, prix, info) VALUES ('".$login."','".$_GET['burger']."','".$_GET['formule1']."','".$date."','".$_GET['prix']."','".$_GET['info']."');");
