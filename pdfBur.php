@@ -1,8 +1,8 @@
 <?php
-$db=mysqli_connect("localhost","chopsub","chopsub");
-mysqli_select_db($db,"chopsub");
-//$db=mysqli_connect("eu-cdbr-west-02.cleardb.net","b9cfd46243c65b","8480309c");
-//mysqli_select_db($db,"heroku_880ea39488893f3");
+//$db=mysqli_connect("localhost","chopsub","chopsub");
+//mysqli_select_db($db,"chopsub");
+$db=mysqli_connect("eu-cdbr-west-02.cleardb.net","b9cfd46243c65b","8480309c");
+mysqli_select_db($db,"heroku_880ea39488893f3");
 $query="select * from burger";
 $resultat=mysqli_query($db,$query);
 Include("phpToPDF.php");
