@@ -70,65 +70,20 @@ div#footer {
 	text-align: center;
 	margin: auto;
 	padding-top: 20px;
-	padding-left: 240px;
-}
-div#bouton1 {
-	font-family: Arial,sans-serif;
-	float: left;
-	font-size: 1.0em;
-	width: 150px;
-	height: 30px;
-	padding-top: 10px;
-	cursor: pointer;
-	margin: auto;
-	margin-right: 20px;
-	text-align: center;
-	color: black;
-	background: #007536;
-	border-radius: 8px; 
-	background: -webkit-linear-gradient( #00B454, #007536);
-	background:    -moz-linear-gradient( #00B454, #007536);
-	background:     -ms-linear-gradient( #00B454, #007536);
-	background:      -o-linear-gradient( #00B454, #007536);
-	background:         linear-gradient( #00B454, #007536);
-	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
-}
-div#bouton1:active {
-	font-family: Arial,sans-serif;
-	float: left;
-	font-size: 1.0em;
-	width: 150px;
-	height: 30px;
-	padding-top: 10px;
-	cursor: pointer;
-	margin: auto;
-	margin-right: 20px;
-	text-align: center;
-	color: black;
-	background: #007536;
-	border-radius: 8px; 
-	background: -webkit-linear-gradient( #02A458, #2C2C2C);
-	background:    -moz-linear-gradient( #02A458, #2C2C2C);
-	background:     -ms-linear-gradient( #02A458, #2C2C2C);
-	background:      -o-linear-gradient( #02A458, #2C2C2C);
-	background:         linear-gradient( #02A458, #2C2C2C);
-	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
-	box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4); 
+	padding-left: 140px;
 }
 
-a {
+div#bouton1 {
         font-family: Arial,sans-serif;
         float: left;
-        text-decoration:none;
         font-size: 1.0em;
         width: 150px;
-        height: 30px;
+        height: 35px;
+        padding-top: 15px;
         cursor: pointer;
         margin: auto;
         margin-right: 20px;
         text-align: center;
-        border: 0px;
-        padding-top:10px;
         color: black;
         background: #007536;
         border-radius: 8px;
@@ -139,14 +94,13 @@ a {
         background:         linear-gradient( #00B454, #007536);
         text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
 }
-a:active {
+div#bouton1:active {
         font-family: Arial,sans-serif;
         float: left;
         font-size: 1.0em;
-        text-decoration:none;
         width: 150px;
-        height: 30px;
-        padding-top: 10px;
+        height: 35px;
+        padding-top: 15px;
         cursor: pointer;
         margin: auto;
         margin-right: 20px;
@@ -163,10 +117,49 @@ a:active {
         box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
 }
 
-
-
-
-
+div#bouton2 {
+	font-family: Arial,sans-serif;
+	float: left;
+	font-size: 1.0em;
+	width: 150px;
+	height: 40px;
+	padding-top: 10px;
+	cursor: pointer;
+	margin: auto;
+	margin-right: 20px;
+	text-align: center;
+	color: black;
+	background: #007536;
+	border-radius: 8px; 
+	background: -webkit-linear-gradient( #00B454, #007536);
+	background:    -moz-linear-gradient( #00B454, #007536);
+	background:     -ms-linear-gradient( #00B454, #007536);
+	background:      -o-linear-gradient( #00B454, #007536);
+	background:         linear-gradient( #00B454, #007536);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+div#bouton2:active {
+	font-family: Arial,sans-serif;
+	float: left;
+	font-size: 1.0em;
+	width: 150px;
+	height: 40px;
+	padding-top: 10px;
+	cursor: pointer;
+	margin: auto;
+	margin-right: 20px;
+	text-align: center;
+	color: black;
+	background: #007536;
+	border-radius: 8px; 
+	background: -webkit-linear-gradient( #02A458, #2C2C2C);
+	background:    -moz-linear-gradient( #02A458, #2C2C2C);
+	background:     -ms-linear-gradient( #02A458, #2C2C2C);
+	background:      -o-linear-gradient( #02A458, #2C2C2C);
+	background:         linear-gradient( #02A458, #2C2C2C);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+	box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4); 
+}
 #boutonV {
 	text-decoration: none;
 	border: 0px;
