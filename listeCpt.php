@@ -5,7 +5,7 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-<link href="./css/StyleNewCpt.css" rel="stylesheet" media="all" type="text/css">
+<link href="./css/StyleListeCpt.css" rel="stylesheet" media="all" type="text/css">
 <link href="./css/baniere.css" rel="stylesheet" media="all" type="text/css">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
@@ -67,44 +67,61 @@ if ($donnees1['nb1']==1) {
 	</div>
 </div>
 <div id=page>
-	<div id=titre> CREATION D'UN NOUVEAU COMPTE </div>
-	<form action="creationCpt.php" method="post">
-		<div id=login>
-			<div id=text> nouveau login :</div>
-			<div id=saisie> <input type="text" name="nlogin" /> </div>
-		</div>
-		<div id=mdp>
-			<div id=text1> nouveau mot de passe : </div>
-			<div id=saisie1> <input type="password" name="nmdp" /> </div>
-		</div>
-		<div id=mdp>
-                        <div id=text1> role : </div>
-                        <div id=saisie1> 
-				<select name="role" > 
-					<option value="0">utilisasteur</option>
-					<option value="1">admin</option>
-					<option value="2">subway</option>
-					<option value="3">burger</option>
-					<option value="4">pizza</option>	
-				</select>
-			
-			</div>
-                </div>
+<div id=tablo>
+	<form action="modificationCpt.php" method="post">
+	<table>
+	<tr>
+		<td> Modif </td>
+		<td> login </td>
+		<td> Modif </td>
+		<td> login </td>
+		<td> Modif </td>
+                <td> login </td>
+	</tr>
+	<?php
+		$connection2 = $bdd->query("SELECT login FROM identi");
+$ligne=0;
+$transit=array();
+$tableau=array();
+$transit[]="inconnu";
+		while ($donnees2 = $connection2->fetch()){
+		$transit[]=$donnees2[login];
+		$tableau=array_merge($tableau, $transit);
+		$transit=array();
+		$ligne=$ligne+1;
+		}		
+for ($i=1; $i<=ceil($ligne/3); $i++){
+echo '<tr>';
+	echo "<td><input type='radio' name='sup' value=".$tableau[3*$i-2]."></td>";
+	echo '<td>'.$tableau[3*$i-2].'</td>';
+		if (isset($tableau[3*$i-1])){
+			echo "<td><input type='radio' name='sup' value=".$tableau[3*$i-1]."></td>";
+		}
+	echo '<td>'.$tableau[3*$i-1].'</td>';
+		if (isset($tableau[3*$i])){
+                        echo "<td><input type='radio' name='sup' value=".$tableau[3*$i]."></td>";
+                }
+	echo '<td>'.$tableau[3*$i].'</td>';
+echo '</tr>';
 
 
-	<div id=footer>
-	<!--		<a href="javascript:history.back()">RETOUR</a> -->
-			<div id=bouton1 onclick="self.location.href='gestionCpt.php'">
-				RETOUR
-			</div>
-		        <input type="submit" value="VALIDER" id="boutonV">
-	</div>
-	</div>
-		</div>
-</form>
+}
+
+
+
+?>
+	</table>
 </div>
-
+        <div id=footer> 
+		<div id=bouton1 onclick="self.location.href='gestionCpt.php'"> 
+                	RETOUR
+                </div>
+                        <input type="submit" value="VALIDER" id="boutonV">
+	</form>
+        </div>              
+</div>
 		<?php
+
 }
 else {
 	?>

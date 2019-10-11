@@ -5,7 +5,7 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-<link href="./css/StyleNewCpt.css" rel="stylesheet" media="all" type="text/css">
+<link href="./css/StyleSupUser.css" rel="stylesheet" media="all" type="text/css">
 <link href="./css/baniere.css" rel="stylesheet" media="all" type="text/css">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
@@ -20,6 +20,7 @@ if(isset($_SESSION['login']))
 {
 	$login=$_SESSION['login'];
 	$mdp=$_SESSION['mdp'];
+	$_SESSION['modifLog']=$_POST['sup'];
 }
 $connection = $bdd->query("SELECT COUNT(*) as nb1 FROM identi where login='".$login."' AND mdp='".$mdp."'");
 $donnees1 = $connection->fetch();
@@ -67,44 +68,20 @@ if ($donnees1['nb1']==1) {
 	</div>
 </div>
 <div id=page>
-	<div id=titre> CREATION D'UN NOUVEAU COMPTE </div>
-	<form action="creationCpt.php" method="post">
-		<div id=login>
-			<div id=text> nouveau login :</div>
-			<div id=saisie> <input type="text" name="nlogin" /> </div>
+
+<div id=titre> Suppression de l'utilisateur <?php echo $_SESSION['compte']?> </div>
+	Etes vous sur de vouloir supprimer le user <b> <?php echo $_SESSION['compte']?>	</b>
+		<div id=footer>
+			<a href='listeCpt.php'>RETOUR</a>
+			<div id=bouton1 onclick="self.location.href='supUser.php'">
+                               	SUPPRESSION
+                        </div>
+		
 		</div>
-		<div id=mdp>
-			<div id=text1> nouveau mot de passe : </div>
-			<div id=saisie1> <input type="password" name="nmdp" /> </div>
-		</div>
-		<div id=mdp>
-                        <div id=text1> role : </div>
-                        <div id=saisie1> 
-				<select name="role" > 
-					<option value="0">utilisasteur</option>
-					<option value="1">admin</option>
-					<option value="2">subway</option>
-					<option value="3">burger</option>
-					<option value="4">pizza</option>	
-				</select>
-			
-			</div>
-                </div>
 
 
-	<div id=footer>
-	<!--		<a href="javascript:history.back()">RETOUR</a> -->
-			<div id=bouton1 onclick="self.location.href='gestionCpt.php'">
-				RETOUR
-			</div>
-		        <input type="submit" value="VALIDER" id="boutonV">
-	</div>
-	</div>
-		</div>
-</form>
 </div>
-
-		<?php
+<?php
 }
 else {
 	?>

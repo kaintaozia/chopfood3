@@ -3,6 +3,7 @@
 <?php
 include "connexion.php";
 $bdd = connexion();
+session_start();
 ?>
 <head>
 	<link href="./css/StyleEnregSub.css" rel="stylesheet" media="all" type="text/css">
@@ -120,8 +121,9 @@ else {
 
 $date = date("Y-m-d");
 $pate = utf8_decode($_GET['patte']);
-$bdd->exec("INSERT INTO pizza (nom, pizza, taille, patte, date, prix, info) VALUES ('".$login."','".$_GET['pizza']."','".$_GET['taille']."','".$pate."','".$date."','".$_GET['prix']."','".$_GET['info']."');");
-/*$bdd->exec("INSERT INTO pizza (nom, pizza, taille, patte, prix) VALUES ('".$login."','".$_GET['pizza']."','".$_GET['taille']."','".$_GET['patte']."','11');");*/
+$info = utf8_decode($_SESSION['info1']);
+
+$bdd->exec("INSERT INTO pizza (nom, pizza, taille, patte, date, prix, info) VALUES ('".$login."','".$_GET['pizza']."','".$_GET['taille']."','".$pate."','".$date."','".$_GET['prix']."','".addslashes($info)."');");
 $bdd->exec("insert into commande (id, type, jour) values ('".$login."','pizza','".$date."');");
 
 ?>
@@ -129,7 +131,9 @@ $bdd->exec("insert into commande (id, type, jour) values ('".$login."','pizza','
 	<div id=text>
 		Votre commande est enregistrée 
 	</div>	
-
+<?php
+echo $test;
+?>
 
 			<div id=boutonD onclick="self.location.href='identification.php'">
 					ACCUEIL

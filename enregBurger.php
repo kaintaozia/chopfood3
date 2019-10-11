@@ -121,8 +121,8 @@ if ($_GET['burger']=='' || $_GET['formule1']=='' || $_GET['prix']=='' ) {
 else {
 
 $date = date("Y-m-d");
-
-$bdd->exec("INSERT INTO burger (nom, burger, formule, date, prix, info) VALUES ('".$login."','".$_GET['burger']."','".$_GET['formule1']."','".$date."','".$_GET['prix']."','".$_GET['info']."');");
+$info = utf8_decode($_SESSION['info1']);
+$bdd->exec("INSERT INTO burger (nom, burger, formule,  date, prix, info) VALUES ('".$login."','".$_GET['burger']."','".$_GET['formule1']."','".$date."','".$_GET['prix']."','".addslashes($info)."');");
 $bdd->exec("insert into commande (id, type, jour) values ('".$login."','burger','".$date."');");
 
 ?>
