@@ -3,7 +3,11 @@
 <?php
 include "connexion.php";
 $bdd = connexion();
+session_start();
 ?>
+
+
+
 <head>
 	<link href="./css/StyleVerifPiz.css" rel="stylesheet" media="all" type="text/css">
 	<link href="./css/baniere.css" rel="stylesheet" media="all" type="text/css">
@@ -163,8 +167,7 @@ $info=$_POST['info'];
 <a href="javascript:history.back()">RETOUR</a>
 <?php
 echo "<a href='enregPizza.php?pizza=".$pizza."&taille=".$taille."&patte=".$patte."&prix=".$prix."&info=".$info."'> ENREGISTER </a>";
-
-
+$_SESSION['info1']=$info;
 ?>
 
 </div>

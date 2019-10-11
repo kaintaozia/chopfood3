@@ -126,6 +126,35 @@ Si pas de commande
                                <b>  Formule 1 </b>
                         </div>
                 </div>
+                <div id=ligne1>
+                        <div class=CocheP1>
+                                <input type="radio" name="burger" value="Bacon/cheese killer" />
+                        </div>
+                        <div id=col1>
+                              <b>  Bacon/cheese killer :</b> double steak (125g), double bacon, oigons rouges, double cheddar, cornichons, ketchup
+                        </div>
+                        <div id=col2>
+                                10 €
+                        </div>
+                        <div id=col3>
+                                13 €
+                        </div>
+                </div>
+
+                <div id=ligne1>
+                        <div class=CocheP1>
+                                <input type="radio" name="burger" value="Papa Jonny" />
+                        </div>
+                        <div id=col1>
+                              <b>  Papa Jonny :</b> steak (165g) charolais, bacon, rosti, oigons rouges, double-cheddar, cornichons, sauce burger 
+                        </div>
+                        <div id=col2>
+                                10 €
+                        </div>
+                        <div id=col3>
+                                13 €
+                        </div>
+                </div>
 
 		<div id=ligne1>
 			<div class=CocheP1>
@@ -253,20 +282,6 @@ Si pas de commande
                         </div>
                         <div id=col3>
                                 11 €
-                        </div>
-                </div>
- 		<div id=ligne1>
-                        <div class=CocheP1>
-                                <input type="radio" name="burger" value="Colorado" />
-                        </div>
-                        <div id=col1>
-                              <b>  Colorado :</b> pain maïs, steak 165g charolais,  oignons frits, cheddar fumé, ketchup, moutarde
-                        </div>
-                        <div id=col2>
-                                7 €
-                        </div>
-                        <div id=col3>
-                                10 €
                         </div>
                 </div>
 

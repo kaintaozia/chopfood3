@@ -222,8 +222,8 @@ if ($donnees3['admin']==4) {
 			</div> 
 		</div>
 		<div id=Option4>
-			<div id=bouton1 onclick="self.location.href='newCpt.php'">
-				Créer un compte	
+			<div id=bouton1 onclick="self.location.href='gestionCpt.php'">
+				gestion des comptes	
 			</div>
 		</div>
 	</div>

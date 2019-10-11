@@ -119,6 +119,9 @@ else {
 /*----------------------------------------------------
 		Calcul du prix
 ----------------------------------------------------*/
+        if ($_POST['burger']== "Bacon/cheese killer" || $_POST['burger']== "Papa Jonny" ) {
+                $prix='10';
+        }
 
 	if ($_POST['burger']== "Tony Montagnard" || $_POST['burger']== "Everest" || $_POST['burger']== "Repenti" || $_POST['burger']== "Parrain") {
 		$prix='9';
@@ -190,7 +193,7 @@ $info=$_POST['info'];
 <a href="javascript:history.back()">RETOUR</a>
 <?php
 echo "<a href='enregBurger.php?burger=".$burger."&formule1=".$formule1."&prix=".$prix."&info=".$info."'> ENREGISTER </a>";
-
+$_SESSION['info1']=$info;
 
 ?>
 
